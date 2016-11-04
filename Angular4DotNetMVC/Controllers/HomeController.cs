@@ -10,7 +10,9 @@ namespace Angular4DotNetMVC.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            string naam = "Pierre";
+
+            return View("Index","",naam);
         }
 
         public ActionResult About()

@@ -23,8 +23,12 @@ namespace Angular4DotNetMVC
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                      "~/scripts/angular-min-1-5-0.js",
+                      "~/Scripts/registration-module.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrap-slate-min.css",
                       "~/Content/site.css"));
         }
     }
