@@ -14,5 +14,13 @@ namespace Angular4DotNetMVC.Controllers
         {
             return View("Index", "", RegistrationVmBuilder.GetSerializedInstructorVms());
         }
+
+        public ActionResult Print()
+        {
+            var banaan = "banaan";
+            var s = banaan.Equals("banaan") ? "banaan " + banaan : "geen banaan";
+            return View("Print",s);
+        }
+
     }
 }

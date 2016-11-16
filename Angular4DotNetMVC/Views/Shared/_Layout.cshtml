@@ -6,6 +6,7 @@
     @Scripts.Render("~/bundles/modernizr")
     <script src="~/Scripts/registration-module.js"></script>
     @RenderSection("JavascriptInHead", required: false)
+    @RenderSection("scripts",required:false) @*als eerste vb voor home/index*@ 
 </head>
 <body>
     @RenderBody()

@@ -4,15 +4,17 @@
 }
 
 
-
-<script src="~/Scripts/Instructors/instructors-controller.js"></script>
-<script type="text/javascript">
-    registrationModule.factory('bootstrappedInstructors', function () {
-        return {
-            instructors:@Html.Raw(Model)
-            };
-    });
-</script>
+@section JavascriptInHead{
+    <script src="~/Scripts/Instructors/instructors-controller.js"></script>
+    <script type="text/javascript">
+        registrationModule.factory('bootstrappedInstructors',
+            function() {
+                return {
+                    instructors: @Html.Raw(Model)
+                };
+            });
+    </script>
+}
 
 <div class="container" ng-controller="InstructorsController">
     <div class="row">
