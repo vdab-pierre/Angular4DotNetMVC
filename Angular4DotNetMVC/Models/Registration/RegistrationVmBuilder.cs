@@ -34,6 +34,15 @@ namespace Angular4DotNetMVC.Models.Registration
             
             return JsonConvert.SerializeObject(instructors, Formatting.None, _settings);
         }
-        
+
+        public static RegistrationVm BuidRegistrationVm()
+        {
+            var registrationVm = new RegistrationVm
+            {
+                Courses=GetSerializedCourseVms(),
+                Instructors=GetSerializedInstructorVms()
+            };
+            return registrationVm;
+        }
     }
 }

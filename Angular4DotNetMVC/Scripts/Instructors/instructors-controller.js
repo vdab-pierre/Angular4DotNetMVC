@@ -1,4 +1,4 @@
 ﻿'use strict';
-registrationModule.controller("InstructorsController", function ($scope, bootstrappedInstructors) {
-    $scope.instructors = bootstrappedInstructors.instructors;
+registrationModule.controller("InstructorsController", function ($scope, bootstrappedData) {
+    $scope.instructors = bootstrappedData.instructors;
 });
