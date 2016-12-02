@@ -13,7 +13,7 @@ namespace Angular4DotNetMVC.Controllers
         //with-ajax branch
         public ActionResult Index()
         {
-            return View(RegistrationVmBuilder.BuidRegistrationVm());
+            return View();
         }
     }
 }

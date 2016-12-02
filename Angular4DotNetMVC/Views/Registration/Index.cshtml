@@ -6,15 +6,7 @@
 @section JavascriptInHead{
     <script src="~/Scripts/Instructors/instructors-controller.js"></script>
     <script src="~/Scripts/courses/courses-controller.js"></script>
-    <script type="text/javascript">
-        registrationModule.factory('bootstrappedData',
-            function() {
-                return{
-                    courses:@Html.Raw(Model.Courses),
-                    instructors:@Html.Raw(Model.Instructors)
-                };
-            });
-    </script>
+   
 }
 
 <div class="container">
