@@ -1,18 +1,12 @@
 ﻿using Angular4DotNetMVC.Models.Courses;
 using Angular4DotNetMVC.Models.Instructors;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Angular4DotNetMVC.Models.Registration
 {
     public static class RegistrationVmBuilder
     {
-        private static JsonSerializerSettings _settings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
-        public static string GetSerializedCourseVms()
+        
+        public static CourseVm[] GetCourseVms()
         {
             var courses = new[]
                 {
@@ -21,9 +15,9 @@ namespace Angular4DotNetMVC.Models.Registration
                     new CourseVm {Number = "TRAN201", Name = "Transfiguration", Instructor = "Minerva McGonagall"},
                 };
             
-            return JsonConvert.SerializeObject(courses, Formatting.None, _settings);
+            return courses;
         }
-        public static string GetSerializedInstructorVms()
+        public static InstructorVm[] GetInstructorVms()
         {
             var instructors = new []
                 {
@@ -32,17 +26,7 @@ namespace Angular4DotNetMVC.Models.Registration
                     new InstructorVm {Name="Minerva McGonnal",Email="minerva@hogwarts.com",RoomNumber=102}
                 };
             
-            return JsonConvert.SerializeObject(instructors, Formatting.None, _settings);
-        }
-
-        public static RegistrationVm BuidRegistrationVm()
-        {
-            var registrationVm = new RegistrationVm
-            {
-                Courses=GetSerializedCourseVms(),
-                Instructors=GetSerializedInstructorVms()
-            };
-            return registrationVm;
+            return instructors;
         }
     }
 }
