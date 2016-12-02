@@ -1,12 +1,12 @@
-﻿@model Angular4DotNetMVC.Models.Registration.RegistrationVm
-@{
+﻿@{
     ViewBag.Title = "Index";
 }
 
 @section JavascriptInHead{
     <script src="~/Scripts/Instructors/instructors-controller.js"></script>
     <script src="~/Scripts/courses/courses-controller.js"></script>
-   
+    <script src="~/Scripts/courses/course-repository.js"></script>
+    <script src="~/Scripts/Instructors/instructors-repository.js"></script>
 }
 
 <div class="container">
@@ -21,6 +21,9 @@
                 <ul class="nav navbar-nav">
                     <li><a href="/Registration/Courses">Browse Catalog</a></li>
                     <li><a href="/Registration/Instructors">Browse Instructors</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/Registration/CreateAccount">Create Account</a></li>
                 </ul>
             </div>
         </div>

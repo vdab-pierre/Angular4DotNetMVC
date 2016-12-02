@@ -7,7 +7,7 @@ using Angular4DotNetMVC.Models.Registration;
 
 namespace Angular4DotNetMVC.Controllers
 {
-    public class CoursesController : Controller
+    public class CoursesController : JsonController
     {
         // GET: Courses
         public ActionResult Index()
