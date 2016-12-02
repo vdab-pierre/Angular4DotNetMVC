@@ -10,7 +10,7 @@ namespace Angular4DotNetMVC.Controllers
     public class RegistrationController : Controller
     {
         // GET: Registration
-        
+        //with-ajax branch
         public ActionResult Index()
         {
             return View(RegistrationVmBuilder.BuidRegistrationVm());
