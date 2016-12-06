@@ -1,4 +1,4 @@
-﻿registrationModule.factory('courseRepository',function($http, $q) {
+﻿registrationModule.factory('coursesRepository',function($http, $q) {
     return{
         get:function() {
             var deferred = $q.defer();

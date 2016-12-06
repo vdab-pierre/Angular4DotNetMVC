@@ -13,7 +13,8 @@ namespace Angular4DotNetMVC.Controllers
         [HttpPost]
         public ActionResult Save(StudentVm student)
         {
-            //registration in db etc?
+            //do whatever you should do with the student to save it
+
             return new HttpStatusCodeResult(HttpStatusCode.OK);
         }
     }

@@ -1,4 +1,4 @@
 ﻿'use strict';
-registrationModule.controller("InstructorsController", function ($scope, instructorRepository) {
+registrationModule.controller("instructorsController", function ($scope, instructorRepository) {
     instructorRepository.get().then(function (instructors) { $scope.instructors = instructors });
 });

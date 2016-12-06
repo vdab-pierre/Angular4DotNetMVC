@@ -1,4 +1,4 @@
 ﻿'use strict';
-registrationModule.controller("CoursesController", function ($scope, courseRepository) {
-    courseRepository.get().then(function(courses) {$scope.courses=courses});
+registrationModule.controller("coursesController", function ($scope, coursesRepository) {
+    coursesRepository.get().then(function(courses) {$scope.courses=courses});
 });
