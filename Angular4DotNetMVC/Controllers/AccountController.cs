@@ -15,7 +15,7 @@ namespace Angular4DotNetMVC.Controllers
         {
             //do whatever you should do with the student to save it
 
-            return new HttpStatusCodeResult(HttpStatusCode.OK);
+            return new HttpStatusCodeResult(HttpStatusCode.GatewayTimeout);
         }
     }
 }

@@ -5,7 +5,9 @@ registrationModule.factory('accountRepository',
         return{
             save: function (student) {
                 var deferred = $q.defer();
-                $http.post('/Account/Save', student).success(function () { deferred.resolve(); });
+                $http.post('/Account/Save', student)
+                    .success(function () { deferred.resolve(); })
+                    .error(function() { deferred.reject(); });
                 return deferred.promise;
             }
         };
